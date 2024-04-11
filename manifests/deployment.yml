@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vineelajyothitetrisgameapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vineelajyothitetrisgameapp
+  template:
+    metadata:
+      labels:
+        app: vineelajyothitetrisgameapp 
+    spec:
+      containers:
+        - name: vineelajyothitetrisgameapp 
+          image: acrnewforaks.azurecr.io/vineelajyothitetrisgameapp
+          ports:
+          - containerPort: 80
